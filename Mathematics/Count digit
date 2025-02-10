@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int countDigits(int x) {
+    int res = 0;
+    
+    if (x == 0)  
+        return 1; // Special case: 0 has one digit
+    
+    if (x < 0)
+        x = -x; // Convert negative number to positive
+    
+    while (x > 0) {
+        x = x / 10;
+        res++;
+    }
+    
+    return res;
+}
+
+int main() {
+    int number;
+    
+    // Taking user input
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+    
+    printf("Number of digits: %d\n", countDigits(number));
+
+    return 0;
+}
