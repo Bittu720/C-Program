@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int isPal(int n) {
+    int rev = 0, temp = n;
+
+    while (temp != 0) {
+        int ld = temp % 10;  
+        rev = rev * 10 + ld; 
+        temp = temp / 10;    
+    }
+
+    return (rev == n); 
+}
+
+int main() {
+    int number;
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+    if (isPal(number))
+        printf("%d is a palindrome.\n", number);
+    else
+        printf("%d is not a palindrome.\n", number);
+
+    return 0;
+}
