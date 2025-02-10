@@ -28,3 +28,9 @@ int main() {
 
     return 0;
 }
+
+
+//output:
+Enter an integer: 789
+Number of digits: 3
+
