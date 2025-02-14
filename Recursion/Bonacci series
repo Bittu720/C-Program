@@ -1,0 +1,24 @@
+#include <stdio.h>
+void bonacciseries(int n, int m) {
+    int a[m];
+    for (int i = 0; i < m; i++)
+        a[i] = 0;
+    a[n - 1] = 1;
+    for (int i = n; i < m; i++)
+        for (int j = i - n; j < i; j++)
+            a[i] += a[j];
+    printf("The %d-bonacci series up to %d terms:\n", n, m);
+    for (int i = 0; i < m; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+}
+
+int main() {
+    int n, m;
+    printf("Enter the value of N (number of terms used for summation): ");
+    scanf("%d", &n);
+    printf("Enter the number of terms (M) to generate: ");
+    scanf("%d", &m);
+    bonacciseries(n, m);
+    return 0;
+}
