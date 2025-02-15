@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    int x;
+    printf("Enter an integer: ");
+    scanf("%d", &x);
+    int result = ~x;
+    printf("Bitwise NOT of %d is: %d\n", x, result);
+    return 0;
+}
