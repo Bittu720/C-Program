@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() {
+    int x;
+    printf("Enter an integer (x): ");
+    scanf("%d", &x);
+    printf("%d << 1 = %d\n", x, x << 1);
+    return 0;
+}
