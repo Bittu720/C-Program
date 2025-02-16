@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() {
+    unsigned int x; 
+    printf("Enter a number: ");
+    scanf("%u", &x);
+    printf("Result after shifting right by 1: %u\n", x >> 1);
+    return 0;
+}
