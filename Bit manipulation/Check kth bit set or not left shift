@@ -1,0 +1,16 @@
+#include <stdio.h>
+void isKthBitSet(int n, int k) {
+    if ((n & (1 << (k - 1))) != 0) 
+        printf("SET\n");
+    else
+        printf("NOT SET\n");
+}
+int main() {
+    int n, k;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Enter bit position to check (1-based index): ");
+    scanf("%d", &k);
+    isKthBitSet(n, k);
+    return 0;
+}
