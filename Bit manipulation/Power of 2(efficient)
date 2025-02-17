@@ -1,0 +1,18 @@
+#include <stdio.h>
+int isPow2(int n) {
+    if (n <= 0)
+        return 0;  
+    return (n & (n - 1)) == 0;
+}
+
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    if (isPow2(num)) {
+        printf("%d is a power of 2.\n", num);
+    } else {
+        printf("%d is NOT a power of 2.\n", num);
+    }
+    return 0;
+}
