@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int table[256]; 
+void initialize() {
+    table[0] = 0;
+    for (int i = 1; i < 256; i++) {
+        table[i] = (i & 1) + table[i / 2];
+    }
+}
+int countSetBits(int n) {
+    return table[n & 0xff] + 
+           table[(n >> 8) & 0xff] + 
+           table[(n >> 16) & 0xff] + 
+           table[(n >> 24) & 0xff];
+}
+
+int main() {
+    int num;
+    initialize();
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    printf("Number of set bits in %d is: %d\n", num, countSetBits(num));
+    return 0;
+}
