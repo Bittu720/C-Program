@@ -1,0 +1,33 @@
+#include <stdio.h>
+int isPowerOf2(int n) {
+    if (n <= 0) 
+        return 0; 
+    return (n & (n - 1)) == 0; 
+}
+int isPowerOf2_Loop(int n) {
+    if (n <= 0)
+        return 0; 
+    while (n > 1) {
+        if (n % 2 != 0) 
+            return 0; 
+        n /= 2;
+    }
+    return 1; 
+}
+
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    if (isPowerOf2(num)) {
+        printf("%d is a power of 2 (Bitwise Check).\n", num);
+    } else {
+        printf("%d is NOT a power of 2 (Bitwise Check).\n", num);
+    }
+    if (isPowerOf2_Loop(num)) {
+        printf("%d is a power of 2 (Loop Method).\n", num);
+    } else {
+        printf("%d is NOT a power of 2 (Loop Method).\n", num);
+    }
+    return 0;
+}
