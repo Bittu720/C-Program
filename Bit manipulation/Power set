@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+void printPowerSet(char *str) {
+    int n = strlen(str);
+    int powSize = (int)pow(2, n); 
+    for (int counter = 0; counter < powSize; counter++) {
+        for (int j = 0; j < n; j++) {
+            if (counter & (1 << j)) 
+                printf("%c", str[j]);
+        }
+        printf("\n"); 
+    }
+}
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);
+    printf("Power set:\n");
+    printPowerSet(str);
+    return 0;
+}
