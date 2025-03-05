@@ -1,0 +1,14 @@
+#include <stdio.h>
+int sqRootFloor(int x) {
+    int i = 1;
+    while (i * i <= x)
+        i++;
+    return i - 1;
+}
+int main() {
+    int x;
+    printf("Enter a number: ");
+    scanf("%d", &x);
+    printf("Floor square root: %d\n", sqRootFloor(x));
+    return 0;
+}
