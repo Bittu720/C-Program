@@ -9,7 +9,6 @@ void printSub(char str[], char curr[], int index, int currIndex) {
     curr[currIndex] = str[index];
     printSub(str, curr, index + 1, currIndex + 1);
 }
-
 int main() {
     char str[100], curr[100];
     printf("Enter a string: ");
