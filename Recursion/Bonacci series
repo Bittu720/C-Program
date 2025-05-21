@@ -12,7 +12,6 @@ void bonacciseries(int n, int m) {
         printf("%d ", a[i]);
     printf("\n");
 }
-
 int main() {
     int n, m;
     printf("Enter the value of N (number of terms used for summation): ");
